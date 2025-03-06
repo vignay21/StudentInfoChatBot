@@ -1,0 +1,6 @@
+@StudentInfoChatBot_HostAddress = http://localhost:5223
+
+GET {{StudentInfoChatBot_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

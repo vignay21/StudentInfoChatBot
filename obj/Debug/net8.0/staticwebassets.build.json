@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "kzV9o7BxdgLm8MRk0vt8qbTk0nCaPqXcKS1VzRBmbo4=",
+  "Source": "StudentInfoChatBot",
+  "BasePath": "_content/StudentInfoChatBot",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
