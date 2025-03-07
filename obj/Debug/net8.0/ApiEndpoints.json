@@ -53,8 +53,24 @@
   },
   {
     "ContainingType": "StudentInfoChatBot.Controllers.StudentQueryController",
+    "Method": "AdminLogin",
+    "RelativePath": "api/StudentQuery/Admin/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "StudentInfoChatBot.Models.AdminLoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentInfoChatBot.Controllers.StudentQueryController",
     "Method": "DeleteQuery",
-    "RelativePath": "api/StudentQuery/{id}",
+    "RelativePath": "api/StudentQuery/Delete/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -62,6 +78,53 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentInfoChatBot.Controllers.StudentQueryController",
+    "Method": "GetInvalidQueries",
+    "RelativePath": "api/StudentQuery/Invalid",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentInfoChatBot.Controllers.StudentQueryController",
+    "Method": "ReportInvalidQuery",
+    "RelativePath": "api/StudentQuery/reportInvalid",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "StudentInfoChatBot.ReportInvalidDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentInfoChatBot.Controllers.StudentQueryController",
+    "Method": "UpdateAnswer",
+    "RelativePath": "api/StudentQuery/UpdateAnswer/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newAnswer",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

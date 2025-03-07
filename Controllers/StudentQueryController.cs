@@ -21,12 +21,20 @@ namespace StudentInfoChatBot.Controllers
         public async Task<ActionResult<IEnumerable<StudentQuery>>> GetQueries([FromQuery] string searchText = "")
         {
             var queries = await _context.StudentQueries
-                .Where(q => string.IsNullOrEmpty(searchText) ||
-                            q.Question.ToLower().Contains(searchText.ToLower()))
+                .Where(q => q.IsValid == true &&
+                            q.Question != null && q.Answer != null &&
+                            (string.IsNullOrEmpty(searchText) ||
+                             q.Question.ToLower().Contains(searchText.ToLower())))
                 .ToListAsync();
+
+            if (!queries.Any())
+            {
+                return Ok(new { message = "Sorry, I don't understand." });
+            }
 
             return Ok(queries);
         }
+
 
         // ✅ POST: api/StudentQueries (Insert a new query)
         [HttpPost]
@@ -37,8 +45,54 @@ namespace StudentInfoChatBot.Controllers
             return CreatedAtAction(nameof(GetQueries), new { id = query.Id }, query);
         }
 
-        // ✅ DELETE: api/StudentQueries/{id} (Remove a query)
-        [HttpDelete("{id}")]
+        [HttpPost("reportInvalid")]
+        public IActionResult ReportInvalidQuery([FromBody] ReportInvalidDto request)
+        {
+            var query = _context.StudentQueries.FirstOrDefault(q => q.Id == request.Id);
+            if (query == null)
+            {
+                return NotFound(new { message = "Query not found" });
+            }
+
+            query.IsInvalid = true;
+            query.IsValid = false;  // ✅ Mark as NOT valid
+            _context.SaveChanges();
+
+            return Ok(new { message = "Query marked as invalid" });
+        }
+
+
+        [HttpGet("Invalid")]
+        public IActionResult GetInvalidQueries()
+        {
+            var invalidQueries = _context.StudentQueries
+                .Where(q => q.IsInvalid == true && q.IsValid == false) // ✅ Ensure both conditions are met
+                .Select(q => new { id = q.Id, question = q.Question, answer = q.Answer })
+                .ToList();
+
+            return Ok(invalidQueries);
+        }
+
+
+        // ✅ PUT: api/StudentQueries/UpdateAnswer/{id} (Admin updates answer)
+        [HttpPut("UpdateAnswer/{id}")]
+        public async Task<IActionResult> UpdateAnswer(int id, [FromBody] string newAnswer)
+        {
+            var query = await _context.StudentQueries.FindAsync(id);
+            if (query == null)
+            {
+                return NotFound();
+            }
+
+            query.Answer = newAnswer;
+            query.IsValid = true; // Mark as valid after update
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Answer updated successfully" });
+        }
+
+        // ✅ DELETE: api/StudentQueries/Delete/{id} (Admin deletes query)
+        [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> DeleteQuery(int id)
         {
             var query = await _context.StudentQueries.FindAsync(id);
@@ -49,7 +103,17 @@ namespace StudentInfoChatBot.Controllers
 
             _context.StudentQueries.Remove(query);
             await _context.SaveChangesAsync();
-            return NoContent();
+            return Ok(new { message = "Query deleted successfully" });
         }
+        [HttpPost("Admin/Login")]
+        public IActionResult AdminLogin([FromBody] AdminLoginModel login)
+        {
+            if (login.Username == "admin" && login.Password == "admin123")
+            {
+                return Ok(new { token = "sample-jwt-token" }); // Simulated token
+            }
+            return Unauthorized();
+        }
+
     }
 }
