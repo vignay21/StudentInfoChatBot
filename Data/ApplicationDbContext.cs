@@ -8,5 +8,8 @@ namespace StudentInfoChatBot.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<StudentQuery> StudentQueries { get; set; }
+
+
+        public DbSet<AdminUser> AdminUsers { get; set; }
     }
 }

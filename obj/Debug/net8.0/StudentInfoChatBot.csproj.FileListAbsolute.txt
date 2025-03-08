@@ -121,8 +121,11 @@ D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\StudentInfoChatBot.deps.json
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\StudentInfoChatBot.runtimeconfig.json
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\StudentInfoChatBot.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\StudentInfoChatBot.pdb
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\BCrypt.Net-Next.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Humanizer.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -138,6 +141,12 @@ D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.Extensions.Depende
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Microsoft.OpenApi.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\MySqlConnector.dll
@@ -151,6 +160,7 @@ D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\System.Composition.Conventio
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\System.Composition.Hosting.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\System.Composition.Runtime.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 D:\.NET\Chatbot\StudentInfoChatBot\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -227,4 +237,3 @@ D:\.NET\Chatbot\StudentInfoChatBot\obj\Debug\net8.0\refint\StudentInfoChatBot.dl
 D:\.NET\Chatbot\StudentInfoChatBot\obj\Debug\net8.0\StudentInfoChatBot.pdb
 D:\.NET\Chatbot\StudentInfoChatBot\obj\Debug\net8.0\StudentInfoChatBot.genruntimeconfig.cache
 D:\.NET\Chatbot\StudentInfoChatBot\obj\Debug\net8.0\ref\StudentInfoChatBot.dll
-D:\.NET\Chatbot\StudentInfoChatBot\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

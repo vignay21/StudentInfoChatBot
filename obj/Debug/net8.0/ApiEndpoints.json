@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "AdminController",
+    "Method": "GetInvalidQueries",
+    "RelativePath": "api/AdminPanel/Invalid",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "StudentInfoChatBot.Models.AdminLoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "StudentInfoChatBot.Controllers.StudentQueryController",
     "Method": "GetQueries",
     "RelativePath": "api/StudentQuery",
